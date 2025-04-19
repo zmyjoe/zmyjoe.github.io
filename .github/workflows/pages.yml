@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progess: false
+  cancel-in-progress: false
 
 jobs:
   # build job
@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-  # deploy job
+  # deployment job
   deploy:
     environment:
       name: github-pages
