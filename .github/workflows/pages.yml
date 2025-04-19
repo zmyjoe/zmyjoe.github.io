@@ -41,7 +41,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Build with Hexo
-        run: hexo generate
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
