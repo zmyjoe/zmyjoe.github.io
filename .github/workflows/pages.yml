@@ -35,14 +35,14 @@ jobs:
           path: |
             public
             db.json
-          key: ${{ runner.OS }}-hexo-generate-${{ hashFiles('public') }}
+          key: ${{ runner.os }}-hexo-generate-${{ hashFiles('public') }}
           restore-keys: |
-            ${{ runner.OS }}-hexo-generate-
+            ${{ runner.os }}-hexo-generate-
       - name: Install Dependencies
         run: npm ci
       - name: Build with Hexo
         run: npm run build
-      - name: Upload artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
